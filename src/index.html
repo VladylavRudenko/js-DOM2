@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Галерея фотографій</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PinGallery | Vladyslav Rudenko</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>FOTO IMAGE LIST</h1>
+  <div class="wrapper">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">P</span>
+        <span class="logo-text">PinGallery</span>
+      </div>
+
+      <a href="https://send.monobank.ua/jar/ANYav5Y8W2" target="_blank" rel="noopener noreferrer" class="btn-donate">
+        Підтримати проєкт 💜
+      </a>
     </header>
+
     <main>
-        <div id="gallery" class="gallery"></div>
-        <div class="buttons">
-            <button id="loadMore">Завантажити ще 4 картинки</button>
-            <button id="clearGallery">Очистити галерею</button>
-            <button id="removeLast">Видалити останню картинку</button>
-            <button id="reverseGallery">Перевернути галерею</button>
-            <button id="shuffleGallery">Перемішати галерею</button>
-        </div>
+      <div id="gallery" class="gallery"></div>
+
+      <div class="controls">
+        <button id="btn-load" class="btn btn-primary">Завантажити ще 4</button>
+        <button id="btn-reverse" class="btn btn-secondary">Перевернути</button>
+        <button id="btn-remove" class="btn btn-secondary">Видалити останню</button>
+        <button id="btn-clear" class="btn btn-danger">Очистити все</button>
+      </div>
     </main>
-    <script src="script.js"></script>
+
+    <footer class="footer">
+      <p>Created by <a href="https://www.instagram.com/vladislavrvvt/" target="_blank" rel="noopener noreferrer" class="author-link">Vladyslav Rudenko</a></p>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <img id="modal-img" src="" alt="">
+      <div class="modal-info">
+        <div id="modal-avatar" class="pin-avatar"></div>
+        <span id="modal-author" class="pin-author"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
